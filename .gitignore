@@ -1,11 +1,11 @@
-#*.iml
-#.gradle
-#/local.properties
-#/.idea
-#.DS_Store
-#/build
-#/captures
-#.externalNativeBuild
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
 
 # built application files
 *.apk
