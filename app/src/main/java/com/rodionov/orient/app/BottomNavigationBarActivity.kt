@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_bottom_navigation_bar.*
 class BottomNavigationBarActivity: MainActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         bottomNavigationBar.setOnNavigationItemReselectedListener {
             when(it.itemId){
                 R.id.news -> text.text = "news"
@@ -17,6 +18,8 @@ class BottomNavigationBarActivity: MainActivity() {
                 R.id.account -> text.text = "account"
             }
         }
+
+        
     }
 
 }

@@ -9,4 +9,8 @@ import com.rodionov.orient.modules.qr_scanner.presenter.QRScannerPresenter
 class QRScannerFragment: BaseFragment<QRScannerPresenter>() {
     override fun initPresenter() {
     }
+
+    override fun getLayoutResource(): Int {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 }

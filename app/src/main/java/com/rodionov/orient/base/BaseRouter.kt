@@ -7,4 +7,6 @@ import android.support.v4.app.Fragment
  */
 interface BaseRouter {
     fun changeFragment(fragment: Fragment)
+
+    fun openFirstFragment()
 }
