@@ -26,7 +26,7 @@ open abstract class BaseFragment<Presenter>: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         containerView = inflater.inflate(R.layout.base_fragment, container, false) as ViewGroup
         contentView = inflater.inflate(getLayoutResource(), container, false)
-        containerView?.addView(view)
+        containerView?.addView(contentView)
 
         initPresenter()
 

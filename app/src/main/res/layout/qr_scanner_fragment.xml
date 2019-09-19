@@ -21,4 +21,11 @@
             app:frameThickness="2dp"
             app:maskColor="#77000000"/>
 
+<!--    <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Example text"/>-->
+
 </FrameLayout>
