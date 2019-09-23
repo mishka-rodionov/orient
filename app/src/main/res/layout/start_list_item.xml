@@ -1,0 +1,113 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+                name="item"
+                type="com.rodionov.orient.modules.ui.StartListItem" />
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:id="@+id/layoutNumber"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:layout_toEndOf="@+id/layoutNumber"
+                android:src="@drawable/personal" />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@+id/time"
+                android:layout_toEndOf="@+id/image"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{item.firstName + item.lastname}"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:text="Иванов Иван" />
+
+            <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@{item.clubName}"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="14sp"
+                    tools:text="Клуб Ориент" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:layout_toStartOf="@+id/delta"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.startTime}"
+                    tools:text="12:13:56.2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/delta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+12:13:56.2" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
