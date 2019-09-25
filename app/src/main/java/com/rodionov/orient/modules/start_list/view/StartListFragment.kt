@@ -22,7 +22,7 @@ class StartListFragment: BaseFragment<StartListPresenter>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(OrientApp.TAG, "onCreate StartListFragment")
+        Log.d(OrientApp.LIFECYCLE_TAG, "onCreate StartListFragment")
     }
 
     override fun initPresenter() {

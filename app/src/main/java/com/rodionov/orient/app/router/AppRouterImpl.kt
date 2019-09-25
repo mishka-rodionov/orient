@@ -1,20 +1,23 @@
 package com.rodionov.orient.app.router
 
 import android.support.v4.app.Fragment
+import com.rodionov.orient.app.view.MainActivity
+import com.rodionov.orient.base.BaseRouterImpl
+import com.rodionov.orient.modules.qr_scanner.view.QRScannerFragment
+import com.rodionov.orient.modules.start_list.view.StartListFragment
 
 /**
  * Created by rodionov on 24.09.2019.
  */
-class AppRouterImpl: AppRouter {
-    override fun openFirstFragment() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+class AppRouterImpl(activity: MainActivity): BaseRouterImpl(activity.supportFragmentManager), AppRouter {
 
     override fun openStartList() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val fragment = StartListFragment()
+        changeFragment(fragment)
     }
 
-    override fun changeFragment(fragment: Fragment) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun openScannerFragment() {
+        val fragment = QRScannerFragment()
+        changeFragment(fragment)
     }
 }

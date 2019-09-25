@@ -13,12 +13,13 @@ import com.rodionov.orient.app.settings.ModuleTypes
 class OrientApp: Application() {
 
     companion object{
-        val TAG = "oLifeCycle"
+        val LIFECYCLE_TAG = "oLifeCycle"
+        val BNV_TAG ="bnvTag"
     }
 
     override fun onCreate() {
         super.onCreate()
-        Log.d(TAG, "onCreate OrientApp")
+        Log.d(LIFECYCLE_TAG, "onCreate OrientApp")
         BottomNavigationViewSettings.item.add(MenuItem(R.drawable.news, ModuleTypes.NEWS, "Новости"))
         BottomNavigationViewSettings.item.add(MenuItem(R.drawable.personal, ModuleTypes.SCANNER, "Сканнер"))
         BottomNavigationViewSettings.item.add(MenuItem(R.drawable.team, ModuleTypes.START_LIST, "Стартовый протокол"))

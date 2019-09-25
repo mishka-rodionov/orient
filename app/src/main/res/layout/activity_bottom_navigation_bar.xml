@@ -32,8 +32,8 @@
             android:background="@color/grey_navigation_bar"
             android:contentDescription="bottomNavigationBar"
             app:itemIconTint="@drawable/tab_bar_selector_color"
-            app:itemTextColor="@drawable/tab_bar_selector_color"
-            app:menu="@menu/bottom_navigation_item" >
+            app:itemTextColor="@drawable/tab_bar_selector_color">
+<!--            app:menu="@menu/bottom_navigation_item" >-->
 
 <!--        <android.support.design.widget.BottomNavigationView-->
 <!--                android:layout_width="match_parent"-->
