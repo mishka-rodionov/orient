@@ -5,7 +5,7 @@ package com.rodionov.orient.base
  */
 interface BaseView<Presenter> {
 
-    var presenter: Presenter
+    var presenter: Presenter?
 
     fun initPresenter()
 }

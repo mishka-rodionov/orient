@@ -43,7 +43,7 @@ class BottomNavigationBarActivity: MainActivity() {
         }
 
         bottomNavigationBar.setOnNavigationItemSelectedListener {
-
+            presenter?.bottomNavigationItemClicked(it.itemId)
             return@setOnNavigationItemSelectedListener true
         }
     }

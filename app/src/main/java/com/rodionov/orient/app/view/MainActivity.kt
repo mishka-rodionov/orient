@@ -12,9 +12,9 @@ import com.rodionov.orient.base.BaseView
 
 open class MainActivity : AppCompatActivity(), BaseView<AppPresenter> {
 
-    override var presenter: AppPresenter
-        get() = presenter
-        set(value) {presenter = value}
+    override var presenter: AppPresenter? = null
+//        get() = field
+//        set(value){/*this.presenter = value*/}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

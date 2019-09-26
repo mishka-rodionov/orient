@@ -33,6 +33,13 @@ open abstract class BaseFragment<Presenter>: Fragment() {
         return containerView
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initViews(view = view)
+    }
+
+    protected abstract fun initViews(view: View)
+
     protected abstract fun getLayoutResource(): Int
 
     override fun onCreate(savedInstanceState: Bundle?) {
