@@ -32,6 +32,10 @@ class QRScannerFragment: BaseFragment<QRScannerPresenter>(), QRScannerView {
         return R.layout.qr_scanner_fragment
     }
 
+    override fun requestData() {
+
+    }
+
 //    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 //        super.onViewCreated(view, savedInstanceState)
 //        val activity = requireActivity()

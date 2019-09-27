@@ -1,14 +1,17 @@
 package com.rodionov.orient.modules.start_list
 
-import android.support.v4.app.Fragment
+import com.rodionov.orient.modules.start_list.presenter.StartListPresenterImpl
+import com.rodionov.orient.modules.start_list.view.StartListFragment
 
 /**
  * Created by rodionov on 23.09.2019.
  */
-class StartListAssembler(){
+class StartListAssembler{
 
-    fun assemble(view: Fragment){
-
+    fun assemble(view: StartListFragment){
+        val presenter = StartListPresenterImpl()
+        presenter.view = view
+        view.presenter = presenter
     }
 
 }

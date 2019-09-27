@@ -11,13 +11,13 @@ import com.rodionov.orient.R
 /**
  * Created by rodionov on 11.09.2019.
  */
-open abstract class BaseFragment<Presenter>: Fragment() {
+open abstract class BaseFragment<Presenter>: Fragment(), BaseView<Presenter> {
 
-    var presenter: Presenter? = null
+    override var presenter: Presenter? = null
     private var containerView: ViewGroup? = null
     private var contentView: View? = null
 
-    abstract fun initPresenter()
+//    abstract fun initPresenter()
 
 //    fun setPresenter(presenter: Presenter){
 //
@@ -36,11 +36,14 @@ open abstract class BaseFragment<Presenter>: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews(view = view)
+        requestData()
     }
 
     protected abstract fun initViews(view: View)
 
     protected abstract fun getLayoutResource(): Int
+
+    protected abstract fun requestData()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

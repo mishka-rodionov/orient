@@ -7,16 +7,19 @@ import com.github.nitrico.lastadapter.LastAdapter
 import com.rodionov.orient.BR
 import com.rodionov.orient.R
 import com.rodionov.orient.app.OrientApp
+import com.rodionov.orient.app.presenter.AppPresenter
 import com.rodionov.orient.base.BaseFragment
 import com.rodionov.orient.modules.start_list.StartListAssembler
 import com.rodionov.orient.modules.start_list.presenter.StartListPresenter
-import com.rodionov.orient.modules.ui.StartListItem
+import com.rodionov.orient.modules.ui.item.StartListItem
 import kotlinx.android.synthetic.main.start_list_fragment.*
 
 /**
  * Created by rodionov on 23.09.2019.
  */
-class StartListFragment: BaseFragment<StartListPresenter>() {
+class StartListFragment: BaseFragment<StartListPresenter>(), StartListView {
+
+//    override var presenter: StartListPresenter? = null
 
     val list = mutableListOf<StartListItem>()
     val adapter = LastAdapter(list, BR.item)
@@ -27,12 +30,24 @@ class StartListFragment: BaseFragment<StartListPresenter>() {
         Log.d(OrientApp.LIFECYCLE_TAG, "onCreate StartListFragment")
     }
 
+    override fun requestData() {
+        Log.d(OrientApp.LIFECYCLE_TAG, "requestData StartListFragment")
+        presenter?.requestParticipantsList()
+    }
+
     override fun initPresenter() {
         StartListAssembler().assemble(this)
     }
 
     override fun initViews(view: View) {
         adapter.into(startListRecyclerView)
+    }
+
+    override fun updateView(data: List<StartListItem>) {
+        Log.d(OrientApp.LIFECYCLE_TAG, "updateView StartListFragment")
+        list.clear()
+        list.addAll(data)
+        adapter.notifyDataSetChanged()
     }
 
     override fun getLayoutResource(): Int {

@@ -3,11 +3,9 @@
 
     <data>
 
-
-
         <variable
                 name="item"
-                type="com.rodionov.orient.modules.ui.StartListItem" />
+                type="com.rodionov.orient.modules.ui.item.StartListItem" />
     </data>
 
 <RelativeLayout android:layout_width="match_parent"
@@ -54,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="@{item.firstName + item.lastname}"
+                    android:text="@{item.firstName + item.lastName}"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     tools:text="Иванов Иван" />
@@ -85,7 +83,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{item.startTime}"
+                    android:text=""
                     tools:text="12:13:56.2" />
 
         </LinearLayout>
