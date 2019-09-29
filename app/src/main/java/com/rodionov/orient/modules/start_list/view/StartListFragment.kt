@@ -19,7 +19,6 @@ import kotlinx.android.synthetic.main.start_list_fragment.*
  */
 class StartListFragment: BaseFragment<StartListPresenter>(), StartListView {
 
-//    override var presenter: StartListPresenter? = null
 
     val list = mutableListOf<StartListItem>()
     val adapter = LastAdapter(list, BR.item)

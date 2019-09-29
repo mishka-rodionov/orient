@@ -1,6 +1,5 @@
 package com.rodionov.orient.app.router
 
-import android.support.v4.app.Fragment
 import com.rodionov.orient.app.view.MainActivity
 import com.rodionov.orient.base.BaseRouterImpl
 import com.rodionov.orient.modules.qr_scanner.view.QRScannerFragment
