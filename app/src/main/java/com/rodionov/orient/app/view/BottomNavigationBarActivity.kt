@@ -18,14 +18,6 @@ class BottomNavigationBarActivity: MainActivity() {
         super.onCreate(savedInstanceState)
         Log.d(OrientApp.LIFECYCLE_TAG, "onCreate BottomNavigationBarActivity")
 
-//        bottomNavigationBar.setOnNavigationItemReselectedListener {
-//            when(it.itemId){
-//                R.id.news -> text.text = "news"
-//                R.id.total -> text.text = "total"
-//                R.id.account -> text.text = "account"
-//            }
-//        }
-
         val baseRouterImpl = BaseRouterImpl(supportFragmentManager)
         baseRouterImpl.openFirstFragment()
 

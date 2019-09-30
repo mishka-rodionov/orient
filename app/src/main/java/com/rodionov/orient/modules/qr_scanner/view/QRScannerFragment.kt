@@ -57,11 +57,12 @@ class QRScannerFragment: BaseFragment<QRScannerPresenter>(), QRScannerView {
 
     override fun initViews(view: View) {
         val activity = requireActivity()
-        codeScanner = CodeScanner(activity, scannerView)
+//        codeScanner = CodeScanner(activity, scannerView)
 
         if(ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(activity, arrayOf(Manifest.permission.CAMERA), 10)
         } else {
+            codeScanner = CodeScanner(activity, scannerView)
             codeScanner.decodeCallback = DecodeCallback {
                 activity.runOnUiThread {
                     Toast.makeText(activity, it.text, Toast.LENGTH_LONG).show()

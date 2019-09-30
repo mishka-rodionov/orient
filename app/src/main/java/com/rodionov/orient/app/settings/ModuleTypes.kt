@@ -8,5 +8,6 @@ class ModuleTypes {
         val START_LIST = 1
         val SCANNER = 2
         val NEWS = 3
+        val EVENT_CALENDAR = 4
     }
 }

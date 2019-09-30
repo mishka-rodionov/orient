@@ -7,4 +7,5 @@ class StartListItem(val firstName: String = "",
                     val lastName: String = "",
                     val clubName: String = "",
                     val image: String = "",
-                    val startTime: Int = 0)
+                    val startTime: Int = 0,
+                    val positionNumber: String = "")

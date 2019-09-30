@@ -1,0 +1,18 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+                name="item"
+                type="com.rodionov.orient.modules.ui.item.DividerItem" />
+    </data>
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/grey" />
+
+</layout>

@@ -8,10 +8,10 @@
                 type="com.rodionov.orient.modules.ui.item.StartListItem" />
     </data>
 
-<RelativeLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
         <LinearLayout
                 android:id="@+id/layoutNumber"
@@ -25,7 +25,8 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1" />
+                    tools:text="1"
+                    android:text="@{item.positionNumber}" />
 
         </LinearLayout>
 

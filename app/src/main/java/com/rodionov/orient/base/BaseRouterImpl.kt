@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
 import com.rodionov.orient.R
 import com.rodionov.orient.modules.qr_scanner.view.QRScannerFragment
+import com.rodionov.orient.modules.start_list.view.StartListFragment
 
 /**
  * Created by rodionov on 10.09.2019.
@@ -20,7 +21,7 @@ open class BaseRouterImpl(val fragmentManager: FragmentManager){
     }
 
     fun openFirstFragment() {
-        val fragment = QRScannerFragment()
+        val fragment = StartListFragment()
         changeFragment(fragment)
     }
 }

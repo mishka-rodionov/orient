@@ -22,6 +22,7 @@ class OrientApp: Application() {
         Log.d(LIFECYCLE_TAG, "onCreate OrientApp")
         BottomNavigationViewSettings.item.add(MenuItem(R.drawable.news, ModuleTypes.NEWS, "Новости"))
         BottomNavigationViewSettings.item.add(MenuItem(R.drawable.personal, ModuleTypes.SCANNER, "Сканнер"))
-        BottomNavigationViewSettings.item.add(MenuItem(R.drawable.team, ModuleTypes.START_LIST, "Стартовый протокол"))
+        BottomNavigationViewSettings.item.add(MenuItem(R.drawable.team, ModuleTypes.START_LIST, "Стартлист"))
+        BottomNavigationViewSettings.item.add(MenuItem(R.drawable.calendar, ModuleTypes.EVENT_CALENDAR, "Календарь"))
     }
 }
