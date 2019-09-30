@@ -2,6 +2,7 @@ package com.rodionov.orient.app.router
 
 import com.rodionov.orient.app.view.MainActivity
 import com.rodionov.orient.base.BaseRouterImpl
+import com.rodionov.orient.modules.event_calendar.view.EventCalendarFragment
 import com.rodionov.orient.modules.qr_scanner.view.QRScannerFragment
 import com.rodionov.orient.modules.start_list.view.StartListFragment
 
@@ -17,6 +18,11 @@ class AppRouterImpl(activity: MainActivity): BaseRouterImpl(activity.supportFrag
 
     override fun openScannerFragment() {
         val fragment = QRScannerFragment()
+        changeFragment(fragment)
+    }
+
+    override fun openEventCalendarFragment() {
+        val fragment = EventCalendarFragment()
         changeFragment(fragment)
     }
 }

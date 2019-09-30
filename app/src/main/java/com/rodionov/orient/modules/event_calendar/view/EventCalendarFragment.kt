@@ -1,12 +1,15 @@
 package com.rodionov.orient.modules.event_calendar.view
 
+import android.util.Log
 import android.view.View
 import com.github.nitrico.lastadapter.LastAdapter
 import com.rodionov.orient.BR
 import com.rodionov.orient.R
+import com.rodionov.orient.app.OrientApp
 import com.rodionov.orient.base.BaseFragment
 import com.rodionov.orient.modules.event_calendar.presenter.EventCalendarPresenter
 import com.rodionov.orient.modules.event_calendar.EventCalendarAssembler
+import com.rodionov.orient.modules.ui.item.EventCalendarItem
 import kotlinx.android.synthetic.main.event_calendar_fragment.*
 
 
@@ -15,6 +18,7 @@ class EventCalendarFragment : BaseFragment<EventCalendarPresenter>(), EventCalen
 
     val list = mutableListOf<Any>()
     val adapter = LastAdapter(list, BR.item)
+        .map<EventCalendarItem>(R.layout.componen_event_calendar_item)
 
     override fun initPresenter() {
         EventCalendarAssembler().assemble(this)
@@ -25,7 +29,15 @@ class EventCalendarFragment : BaseFragment<EventCalendarPresenter>(), EventCalen
     }
 
     override fun requestData() {
+        Log.d(OrientApp.LIFECYCLE_TAG, "requestData EventCalendarFragment")
+        presenter?.requestEvents()
+    }
 
+    override fun updateView(data: List<Any>) {
+        Log.d(OrientApp.LIFECYCLE_TAG, "updateView EventCalendarFragment")
+        list.clear()
+        list.addAll(data)
+        adapter.notifyDataSetChanged()
     }
 
     override fun getLayoutResource(): Int {

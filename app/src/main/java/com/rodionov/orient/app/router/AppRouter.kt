@@ -6,4 +6,5 @@ package com.rodionov.orient.app.router
 interface AppRouter{
     fun openStartList()
     fun openScannerFragment()
+    fun openEventCalendarFragment()
 }

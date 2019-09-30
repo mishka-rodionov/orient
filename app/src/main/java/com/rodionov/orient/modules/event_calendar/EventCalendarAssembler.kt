@@ -9,6 +9,7 @@ class EventCalendarAssembler {
     fun assemble(view: EventCalendarFragment) {
         val interactor = EventCalendarInteractorImpl()
         val presenter = EventCalendarPresenterImpl()
+        presenter.view = view
         view.presenter = presenter
     }
 
