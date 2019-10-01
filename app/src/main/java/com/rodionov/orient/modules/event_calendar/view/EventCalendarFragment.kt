@@ -9,6 +9,7 @@ import com.rodionov.orient.app.OrientApp
 import com.rodionov.orient.base.BaseFragment
 import com.rodionov.orient.modules.event_calendar.presenter.EventCalendarPresenter
 import com.rodionov.orient.modules.event_calendar.EventCalendarAssembler
+import com.rodionov.orient.modules.ui.item.DividerItem
 import com.rodionov.orient.modules.ui.item.EventCalendarItem
 import kotlinx.android.synthetic.main.event_calendar_fragment.*
 
@@ -19,6 +20,7 @@ class EventCalendarFragment : BaseFragment<EventCalendarPresenter>(), EventCalen
     val list = mutableListOf<Any>()
     val adapter = LastAdapter(list, BR.item)
         .map<EventCalendarItem>(R.layout.componen_event_calendar_item)
+        .map<DividerItem>(R.layout.component_divider_item)
 
     override fun initPresenter() {
         EventCalendarAssembler().assemble(this)

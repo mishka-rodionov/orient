@@ -16,7 +16,7 @@ class StartListPresenterImpl: BasePresenter<StartListView, StartListInteractor>(
     override fun requestParticipantsList() {
         val list = mutableListOf<Any>()
         for (item in 0..10){
-            list.add(StartListItem(firstName = "Ivan $item", lastName = "Ivanov", clubName = "Balashov", startTime = item, positionNumber = item.toString()))
+            list.add(StartListItem(firstName = "Ivan $item", lastName = "Ivanov", clubName = "Balashov", startTime = item, positionNumber = (item + 1).toString()))
             list.add(DividerItem())
         }
 //        for (index in 0 until list.size){

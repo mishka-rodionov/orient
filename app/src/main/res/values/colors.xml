@@ -7,5 +7,6 @@
     <color name="grey_navigation_bar">#f7f7f7</color>
     <color name="black">#000000</color>
     <color name="grey_dark">#888888</color>
+    <color name="white">#FFFFFFFF</color>
 
 </resources>

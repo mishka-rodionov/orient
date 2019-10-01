@@ -6,6 +6,7 @@ import com.rodionov.orient.base.BasePresenter
 import com.rodionov.orient.modules.event_calendar.model.interactor.EventCalendarInteractor
 import com.rodionov.orient.modules.event_calendar.model.interactor.EventCalendarInteractorOutput
 import com.rodionov.orient.modules.event_calendar.view.EventCalendarView
+import com.rodionov.orient.modules.ui.item.DividerItem
 import com.rodionov.orient.modules.ui.item.EventCalendarItem
 
 
@@ -23,6 +24,7 @@ class EventCalendarPresenterImpl() :
                 eventLocation = "Balashov"
             )
         )
+        list.add(DividerItem())
         list.add(
             EventCalendarItem(
                 eventName = "День залетчика 2",
