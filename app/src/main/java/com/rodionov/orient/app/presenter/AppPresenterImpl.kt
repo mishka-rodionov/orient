@@ -17,7 +17,7 @@ class AppPresenterImpl(val router: AppRouter): BasePresenter<BottomNavigationBar
             ModuleTypes.START_LIST -> router.openStartList()
             ModuleTypes.SCANNER -> router.openScannerFragment()
             ModuleTypes.EVENT_CALENDAR -> router.openEventCalendarFragment()
-            ModuleTypes.NEWS -> router
+            ModuleTypes.NEWS -> router.openNews()
         }
     }
 }

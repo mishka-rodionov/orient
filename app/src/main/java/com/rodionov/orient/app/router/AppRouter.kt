@@ -7,4 +7,5 @@ interface AppRouter{
     fun openStartList()
     fun openScannerFragment()
     fun openEventCalendarFragment()
+    fun openNews()
 }

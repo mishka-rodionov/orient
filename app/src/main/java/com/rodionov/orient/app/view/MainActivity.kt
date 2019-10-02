@@ -1,8 +1,8 @@
 package com.rodionov.orient.app.view
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.rodionov.orient.R
 import com.rodionov.orient.app.OrientApp
 import com.rodionov.orient.app.presenter.AppPresenter

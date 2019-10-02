@@ -24,13 +24,13 @@
 
     </FrameLayout>
 
-    <android.support.design.widget.BottomNavigationView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationBar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_alignParentBottom="true"
+            app:labelVisibilityMode="labeled"
             android:background="@color/grey_navigation_bar"
-            android:contentDescription="bottomNavigationBar"
             app:itemIconTint="@drawable/tab_bar_selector_color"
             app:itemTextColor="@drawable/tab_bar_selector_color">
 <!--            app:menu="@menu/bottom_navigation_item" >-->
@@ -38,6 +38,6 @@
 <!--        <android.support.design.widget.BottomNavigationView-->
 <!--                android:layout_width="match_parent"-->
 <!--                android:layout_height="match_parent" />-->
-    </android.support.design.widget.BottomNavigationView>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>

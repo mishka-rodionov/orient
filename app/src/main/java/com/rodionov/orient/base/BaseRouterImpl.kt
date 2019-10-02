@@ -1,10 +1,9 @@
 package com.rodionov.orient.base
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.rodionov.orient.R
-import com.rodionov.orient.modules.qr_scanner.view.QRScannerFragment
 import com.rodionov.orient.modules.start_list.view.StartListFragment
 
 /**

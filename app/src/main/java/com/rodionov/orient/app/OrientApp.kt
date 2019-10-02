@@ -15,6 +15,7 @@ class OrientApp: Application() {
     companion object{
         val LIFECYCLE_TAG = "oLifeCycle"
         val BNV_TAG ="bnvTag"
+        val NETWORK = "networkTest"
     }
 
     override fun onCreate() {

@@ -1,5 +1,6 @@
 package com.rodionov.orient.network
 
+import com.rodionov.orient.modules.news.model.backend.NewsServiceApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -15,7 +16,9 @@ class ServiceFactory {
 
         const val VK_BASE_URL = "https://api.vk.com/"
 
-//        fun getVkNewsFeed()
+        fun getVkNewsFeed(): NewsServiceApi{
+            return buildVKRetrofit().create(NewsServiceApi::class.java)
+        }
 
         fun buildVKRetrofit(): Retrofit{
             val logging = HttpLoggingInterceptor()
