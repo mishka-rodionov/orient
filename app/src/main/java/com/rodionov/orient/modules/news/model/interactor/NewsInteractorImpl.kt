@@ -12,7 +12,7 @@ import io.reactivex.schedulers.Schedulers
 class NewsInteractorImpl : BaseInteractor<NewsInteractorOutput>(), NewsInteractor{
 
     override fun requestData() {
-        ServiceFactory.getVkNewsFeed().getWall("orienteeringbalashov", 4, 0)
+        ServiceFactory.getVkNewsFeed().getWall("orienteeringbalashov", 10, 0)
             .subscribeOn(Schedulers.newThread())
 //            .map {
 //
@@ -28,6 +28,7 @@ class NewsInteractorImpl : BaseInteractor<NewsInteractorOutput>(), NewsInteracto
                     Log.d(OrientApp.NETWORK, "VKWallResponse likes = ${it.response.items[0].likes.count}")
                     Log.d(OrientApp.NETWORK, "VKWallResponse markedAsAds = ${it.response.items[0].markedAsAds}")
                     Log.d(OrientApp.NETWORK, "VKWallResponse ownerId = ${it.response.items[0].ownerId}")
+                    interactorOutput?.receivedPosts(it)
                 },
                 onError = {
                     Log.d(OrientApp.NETWORK, "${it.stackTrace}")

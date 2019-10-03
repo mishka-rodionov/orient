@@ -11,39 +11,99 @@
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_margin="8dp"
             android:orientation="horizontal">
 
         <ImageView
+                android:id="@+id/likes"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                />
+                android:layout_centerVertical="true"
+                android:padding="@dimen/innerPadding"
+                android:src="@drawable/likes"
+                android:tint="@color/grey" />
+
         <TextView
+                android:id="@+id/likesText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/likes"
+                android:fontFamily="sans-serif-medium"
+                android:text="@{item.likes}"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/statusLineTextSize"
+                tools:text="1234" />
 
         <ImageView
+                android:id="@+id/comments"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                />
+                android:layout_centerVertical="true"
+                android:layout_marginStart="48dp"
+                android:layout_toEndOf="@+id/likes"
+                android:padding="@dimen/innerPadding"
+                android:src="@drawable/comments"
+                android:tint="@color/grey" />
+
         <TextView
+                android:id="@+id/commentsText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/comments"
+                android:fontFamily="sans-serif-medium"
+                android:text="@{item.comments}"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/statusLineTextSize"
+                tools:text="1234" />
 
         <ImageView
+                android:id="@+id/reply"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                />
+                android:layout_centerVertical="true"
+                android:layout_marginStart="48dp"
+                android:layout_toEndOf="@+id/comments"
+                android:padding="@dimen/innerPadding"
+                android:src="@drawable/reply"
+                android:tint="@color/grey" />
+
         <TextView
+                android:id="@+id/replyText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/reply"
+                android:fontFamily="sans-serif-medium"
+                android:text="@{item.reposts}"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/statusLineTextSize"
+                tools:text="1234" />
 
         <ImageView
+                android:id="@+id/views"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                />
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="48dp"
+                android:padding="@dimen/innerPadding"
+                android:src="@drawable/views"
+                android:tint="@color/grey" />
+
         <TextView
+                android:id="@+id/viewsText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="end"
+                android:text="@{item.views}"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/statusLineTextSize"
+                tools:text="1234" />
 
     </RelativeLayout>
 
