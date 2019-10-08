@@ -1,12 +1,11 @@
-package com.rodionov.orient.app.view
+package com.rodionov.orient.app.main_activities.view
 
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-import com.rodionov.orient.app.ApplicationAssembler
+import com.rodionov.orient.app.main_activities.ApplicationAssembler
 import com.rodionov.orient.app.OrientApp
-import com.rodionov.orient.app.settings.BottomNavigationViewSettings
-import com.rodionov.orient.base.BasePresenter
+import com.rodionov.orient.app.main_activities.settings.BottomNavigationViewSettings
 import com.rodionov.orient.base.BaseRouterImpl
 import kotlinx.android.synthetic.main.activity_bottom_navigation_bar.*
 
@@ -18,8 +17,10 @@ class BottomNavigationBarActivity: MainActivity() {
         super.onCreate(savedInstanceState)
         Log.d(OrientApp.LIFECYCLE_TAG, "onCreate BottomNavigationBarActivity")
 
-        val baseRouterImpl = BaseRouterImpl(supportFragmentManager)
-        baseRouterImpl.openFirstFragment()
+        presenter?.openFirstFragment()
+
+//        val baseRouterImpl = BaseRouterImpl(supportFragmentManager)
+//        baseRouterImpl.openFirstFragment()
 
 
     }

@@ -25,21 +25,27 @@ class NewsFragment : BaseFragment<NewsPresenter>(), NewsView {
 
     val list = mutableListOf<Any>()
     val adapter = LastAdapter(list, BR.item)
-        .map<VKWallPostItem, ComponentVkWallPostItemBinding>(R.layout.component_vk_wall_post_item){
+        .map<VKWallPostItem, ComponentVkWallPostItemBinding>(R.layout.component_vk_wall_post_item) {
             onBind {
-                val width = UIUtils.getScreenSize(activity as Activity).x
-                val params = it.binding.postImage.layoutParams as ViewGroup.MarginLayoutParams
-                val sizes = (list[it.adapterPosition] as VKWallPostItem).image.sizes.sortedByDescending { width }
-                val index = 3
-                Log.d(OrientApp.NETWORK, "screen width = $width")
-                Log.d(OrientApp.NETWORK, "sizes[1].width = ${sizes[index].width}")
-                Log.d(OrientApp.NETWORK, "sizes[1].height = ${sizes[index].height * width / sizes[index].width}")
-                params.width = width
-                params.height = sizes[index].height * width / sizes[index].width
-                it.binding.postImage.layoutParams = params
-                Glide.with(context as Context)
-                    .load((list[it.adapterPosition] as VKWallPostItem).image.sizes[3].url)
-                    .into(it.binding.postImage)
+                if ((list[it.adapterPosition] as VKWallPostItem).image.sizes.isNotEmpty()) {
+                    val width = UIUtils.getScreenSize(activity as Activity).x
+                    val params = it.binding.postImage.layoutParams as ViewGroup.MarginLayoutParams
+                    val sizes =
+                        (list[it.adapterPosition] as VKWallPostItem).image.sizes.sortedByDescending { width }
+                    val index = 3
+                    Log.d(OrientApp.NETWORK, "screen width = $width")
+                    Log.d(OrientApp.NETWORK, "sizes[1].width = ${sizes[index].width}")
+                    Log.d(
+                        OrientApp.NETWORK,
+                        "sizes[1].height = ${sizes[index].height * width / sizes[index].width}"
+                    )
+                    params.width = width
+                    params.height = sizes[index].height * width / sizes[index].width
+                    it.binding.postImage.layoutParams = params
+                    Glide.with(context as Context)
+                        .load((list[it.adapterPosition] as VKWallPostItem).image.sizes[3].url)
+                        .into(it.binding.postImage)
+                }
 
             }
         }

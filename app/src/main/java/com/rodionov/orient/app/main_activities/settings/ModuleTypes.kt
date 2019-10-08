@@ -1,4 +1,4 @@
-package com.rodionov.orient.app.settings
+package com.rodionov.orient.app.main_activities.settings
 
 /**
  * Created by rodionov on 24.09.2019.

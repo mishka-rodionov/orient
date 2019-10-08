@@ -12,7 +12,7 @@ import io.reactivex.schedulers.Schedulers
 class NewsInteractorImpl : BaseInteractor<NewsInteractorOutput>(), NewsInteractor{
 
     override fun requestData() {
-        ServiceFactory.getVkNewsFeed().getWall("orienteeringbalashov", 10, 0)
+        ServiceFactory.getVkNewsFeed().getWall("orienteeringbalashov", 4, 0)
             .subscribeOn(Schedulers.newThread())
 //            .map {
 //

@@ -1,6 +1,6 @@
-package com.rodionov.orient.app.router
+package com.rodionov.orient.app.main_activities.router
 
-import com.rodionov.orient.app.view.MainActivity
+import com.rodionov.orient.app.main_activities.view.MainActivity
 import com.rodionov.orient.base.BaseRouterImpl
 import com.rodionov.orient.modules.event_calendar.view.EventCalendarFragment
 import com.rodionov.orient.modules.news.view.NewsFragment
@@ -10,7 +10,8 @@ import com.rodionov.orient.modules.start_list.view.StartListFragment
 /**
  * Created by rodionov on 24.09.2019.
  */
-class AppRouterImpl(activity: MainActivity): BaseRouterImpl(activity.supportFragmentManager), AppRouter {
+class AppRouterImpl(activity: MainActivity): BaseRouterImpl(activity.supportFragmentManager),
+    AppRouter {
 
     override fun openStartList() {
         val fragment = StartListFragment()
@@ -30,5 +31,9 @@ class AppRouterImpl(activity: MainActivity): BaseRouterImpl(activity.supportFrag
     override fun openNews() {
         val fragment = NewsFragment()
         changeFragment(fragment)
+    }
+
+    override fun openFirstFragment(){
+        openNews()
     }
 }

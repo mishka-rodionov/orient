@@ -1,3 +1,5 @@
 package com.rodionov.orient.modules.personal_information.presenter
 
-interface PersonalInformationPresenter
+interface PersonalInformationPresenter{
+    fun openPersonalInformationFragment()
+}

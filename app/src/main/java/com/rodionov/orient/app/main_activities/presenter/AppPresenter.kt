@@ -1,4 +1,4 @@
-package com.rodionov.orient.app.presenter
+package com.rodionov.orient.app.main_activities.presenter
 
 /**
  * Created by rodionov on 25.09.2019.
@@ -6,5 +6,7 @@ package com.rodionov.orient.app.presenter
 interface AppPresenter {
 
     fun bottomNavigationItemClicked(type: Int)
+
+    fun openFirstFragment()
 
 }

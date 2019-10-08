@@ -1,5 +1,6 @@
 package com.rodionov.orient.modules.news.presenter
 
+import com.rodionov.orient.modules.news.model.entity.VKWallPhoto
 import com.rodionov.orient.modules.news.model.entity.VKWallResponse
 import com.rodionov.orient.modules.ui.item.DividerItem
 import com.rodionov.orient.modules.ui.item.VKWallPostItem
@@ -13,6 +14,9 @@ class NewsMapperImpl: NewsMapper {
         val list = mutableListOf<Any>()
 
         for (index in 0 until from.response.items.size) {
+            var image = VKWallPhoto()
+            if(from.response.items[index].attachments.firstOrNull { it.type == "photo" } != null)
+                image = from.response.items[index].attachments.first { it.type == "photo" }.photo
             list.add(
                 VKWallPostItem(
                     text = from.response.items[index].text,
@@ -21,7 +25,7 @@ class NewsMapperImpl: NewsMapper {
                     reposts = from.response.items[index].reposts.count.toString(),
                     views = from.response.items[index].views.count.toString(),
                     //may be forward to exception
-                    image = from.response.items[index].attachments.filter { it.type == "photo" }[0].photo
+                        image = image
 //                        .sizes[3].url
 //                            [2].photo.sizes[0].url
                 )
