@@ -18,6 +18,8 @@ class VKWallItem(
     val postType: String = "",
     val text: String = "",
     val attachments: List<VKWallAttachment>,
+    @SerializedName("copy_history")
+    val copyHistory: VKWallCopyHistory = VKWallCopyHistory(),
     @SerializedName("post_source")
     val postSource: VKWallPostSource = VKWallPostSource(),
     val comments: VkWallComment = VkWallComment(),
