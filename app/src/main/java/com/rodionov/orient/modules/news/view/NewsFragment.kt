@@ -32,7 +32,7 @@ class NewsFragment : BaseFragment<NewsPresenter>(), NewsView {
                     val params = it.binding.postImage.layoutParams as ViewGroup.MarginLayoutParams
                     val sizes =
                         (list[it.adapterPosition] as VKWallPostItem).image.sizes.sortedByDescending { width }
-                    val index = 3
+                    val index = 2
                     Log.d(OrientApp.NETWORK, "screen width = $width")
                     Log.d(OrientApp.NETWORK, "sizes[1].width = ${sizes[index].width}")
                     Log.d(
@@ -43,7 +43,7 @@ class NewsFragment : BaseFragment<NewsPresenter>(), NewsView {
                     params.height = sizes[index].height * width / sizes[index].width
                     it.binding.postImage.layoutParams = params
                     Glide.with(context as Context)
-                        .load((list[it.adapterPosition] as VKWallPostItem).image.sizes[3].url)
+                        .load((list[it.adapterPosition] as VKWallPostItem).image.sizes[index].url)
                         .into(it.binding.postImage)
                 }
 

@@ -16,15 +16,18 @@
 
         <activity android:name=".app.splash_activity.view.SplashActivity"
                 android:theme="@style/SplashTheme">
+        </activity>
+
+        <activity android:name=".app.main_activities.view.MainActivity" >
+
+        </activity>
+        <activity android:name=".app.main_activities.view.BottomNavigationBarActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".app.main_activities.view.MainActivity" />
-        <activity android:name=".app.main_activities.view.BottomNavigationBarActivity" />
     </application>
 
 </manifest>

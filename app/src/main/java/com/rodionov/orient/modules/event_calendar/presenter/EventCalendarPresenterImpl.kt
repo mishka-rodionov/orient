@@ -5,12 +5,13 @@ import com.rodionov.orient.app.OrientApp
 import com.rodionov.orient.base.BasePresenter
 import com.rodionov.orient.modules.event_calendar.model.interactor.EventCalendarInteractor
 import com.rodionov.orient.modules.event_calendar.model.interactor.EventCalendarInteractorOutput
+import com.rodionov.orient.modules.event_calendar.router.EventCalendarRouterImpl
 import com.rodionov.orient.modules.event_calendar.view.EventCalendarView
 import com.rodionov.orient.modules.ui.item.DividerItem
 import com.rodionov.orient.modules.ui.item.EventCalendarItem
 
 
-class EventCalendarPresenterImpl() :
+class EventCalendarPresenterImpl(private val router: EventCalendarRouterImpl) :
     BasePresenter<EventCalendarView, EventCalendarInteractor>(),
     EventCalendarPresenter, EventCalendarInteractorOutput {
 
@@ -35,5 +36,9 @@ class EventCalendarPresenterImpl() :
         )
         Log.d(OrientApp.LIFECYCLE_TAG, "requestEvents EventCalendarFragment")
         view?.updateView(list)
+    }
+
+    override fun eventItemClicked() {
+        router.openEventDescriptionFragment()
     }
 }
