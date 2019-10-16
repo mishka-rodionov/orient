@@ -1,5 +1,6 @@
 package com.rodionov.orient.modules.start_list.presenter
 
+import com.rodionov.orient.modules.ui.item.AddItem
 import com.rodionov.orient.modules.ui.item.DividerItem
 import com.rodionov.orient.modules.ui.item.StartListItem
 
@@ -23,6 +24,7 @@ class StartListMapperImpl: StartListMapper {
             )
             list.add(DividerItem())
         }
+        list.add(AddItem())
         return list
     }
 }

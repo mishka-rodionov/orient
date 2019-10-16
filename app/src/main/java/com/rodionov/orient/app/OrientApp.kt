@@ -16,6 +16,7 @@ class OrientApp: Application() {
         val LIFECYCLE_TAG = "oLifeCycle"
         val BNV_TAG ="bnvTag"
         val NETWORK = "networkTest"
+        val DEBUG_TAG = "debugTest"
     }
 
     override fun onCreate() {

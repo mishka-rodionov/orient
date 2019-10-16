@@ -8,8 +8,10 @@ import com.rodionov.orient.BR
 import com.rodionov.orient.R
 import com.rodionov.orient.app.OrientApp
 import com.rodionov.orient.base.BaseFragment
+import com.rodionov.orient.databinding.ComponentAddItemBinding
 import com.rodionov.orient.modules.start_list.StartListAssembler
 import com.rodionov.orient.modules.start_list.presenter.StartListPresenter
+import com.rodionov.orient.modules.ui.item.AddItem
 import com.rodionov.orient.modules.ui.item.DividerItem
 import com.rodionov.orient.modules.ui.item.StartListItem
 import kotlinx.android.synthetic.main.start_list_fragment.*
@@ -24,6 +26,11 @@ class StartListFragment: BaseFragment<StartListPresenter>(), StartListView {
     val adapter = LastAdapter(list, BR.item)
         .map<StartListItem>(R.layout.component_start_list_item)
         .map<DividerItem>(R.layout.component_divider_item)
+        .map<AddItem, ComponentAddItemBinding>(R.layout.component_add_item){
+            onClick{
+                Log.d(OrientApp.DEBUG_TAG, "onClick AddItem")
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
