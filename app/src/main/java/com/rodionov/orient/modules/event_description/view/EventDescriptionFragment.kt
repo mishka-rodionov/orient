@@ -5,6 +5,7 @@ import com.rodionov.orient.R
 import com.rodionov.orient.base.BaseFragment
 import com.rodionov.orient.modules.event_description.presenter.EventDescriptionPresenter
 import com.rodionov.orient.modules.event_description.EventDescriptionAssembler
+import kotlinx.android.synthetic.main.event_description_fragment.*
 
 
 class EventDescriptionFragment : BaseFragment<EventDescriptionPresenter>(), EventDescriptionView {
@@ -26,7 +27,9 @@ class EventDescriptionFragment : BaseFragment<EventDescriptionPresenter>(), Even
     }
 
     override fun initViews(view: View) {
-
+        startProtocolLayout.setOnClickListener {
+            presenter?.startProtocolClicked()
+        }
     }
 
     override fun getLayoutResource(): Int {

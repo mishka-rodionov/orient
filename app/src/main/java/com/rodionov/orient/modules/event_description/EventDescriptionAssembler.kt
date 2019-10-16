@@ -1,5 +1,6 @@
 package com.rodionov.orient.modules.event_description
 
+import androidx.fragment.app.FragmentManager
 import com.rodionov.orient.modules.event_description.model.interactor.EventDescriptionInteractorImpl
 import com.rodionov.orient.modules.event_description.presenter.EventDescriptionPresenterImpl
 import com.rodionov.orient.modules.event_description.router.EventDescriptionRouterImpl
@@ -14,7 +15,8 @@ class EventDescriptionAssembler {
 
     fun assemble(view: EventDescriptionFragment) {
         val interactor = EventDescriptionInteractorImpl()
-        val presenter = EventDescriptionPresenterImpl(interactor)
+        val router = EventDescriptionRouterImpl(view.activity?.supportFragmentManager as FragmentManager)
+        val presenter = EventDescriptionPresenterImpl(interactor, router)
 
         interactor.interactorOutput = presenter
         presenter.view = view
