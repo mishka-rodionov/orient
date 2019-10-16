@@ -8,6 +8,10 @@ open class BasePresenter<View, Interactor>(){
     var view: View? = null
     var interactor: Interactor? = null
 
+    constructor(interactor: Interactor): this(){
+        this.interactor = interactor
+    }
+
     constructor(view: View,
                 interactor: Interactor): this(){
 

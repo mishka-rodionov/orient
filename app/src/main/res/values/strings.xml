@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">orient</string>
+    <dimen name="statusLineTextSize">18sp</dimen>
+    <dimen name="innerPadding">4dp</dimen>
 </resources>

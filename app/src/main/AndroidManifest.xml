@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.rodionov.orient">
+        package="com.rodionov.orient">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
             android:name=".app.OrientApp"
@@ -12,17 +13,20 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".app.view.MainActivity">
 
+        <activity android:name=".app.splash_activity.view.SplashActivity"
+                android:theme="@style/SplashTheme">
         </activity>
 
-        <activity android:name=".app.view.BottomNavigationBarActivity">
+        <activity android:name=".app.main_activities.view.MainActivity" >
+
+        </activity>
+        <activity android:name=".app.main_activities.view.BottomNavigationBarActivity" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

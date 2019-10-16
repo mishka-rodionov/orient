@@ -3,10 +3,10 @@ package com.rodionov.orient.modules.qr_scanner.view
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.DecodeCallback
 import com.rodionov.orient.R
@@ -57,11 +57,12 @@ class QRScannerFragment: BaseFragment<QRScannerPresenter>(), QRScannerView {
 
     override fun initViews(view: View) {
         val activity = requireActivity()
-        codeScanner = CodeScanner(activity, scannerView)
+//        codeScanner = CodeScanner(activity, scannerView)
 
         if(ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(activity, arrayOf(Manifest.permission.CAMERA), 10)
         } else {
+            codeScanner = CodeScanner(activity, scannerView)
             codeScanner.decodeCallback = DecodeCallback {
                 activity.runOnUiThread {
                     Toast.makeText(activity, it.text, Toast.LENGTH_LONG).show()
