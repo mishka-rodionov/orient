@@ -14,10 +14,9 @@ import com.rodionov.orient.base.BaseFragment
 import com.rodionov.orient.databinding.ComponentVkWallPostItemBinding
 import com.rodionov.orient.modules.news.presenter.NewsPresenter
 import com.rodionov.orient.modules.news.NewsAssembler
-import com.rodionov.orient.modules.ui.item.DividerItem
-import com.rodionov.orient.modules.ui.item.VKWallPostItem
+import com.rodionov.orient.ui.item.DividerItem
+import com.rodionov.orient.ui.item.VKWallPostItem
 import com.rodionov.orient.utils.UIUtils
-import kotlinx.android.synthetic.main.component_vk_wall_post_item.*
 import kotlinx.android.synthetic.main.news_fragment.*
 
 

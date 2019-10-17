@@ -6,7 +6,7 @@
 
         <variable
                 name="item"
-                type="com.rodionov.orient.modules.ui.item.EventCalendarItem" />
+                type="com.rodionov.orient.ui.item.EventCalendarItem" />
     </data>
 
     <LinearLayout

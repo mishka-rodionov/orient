@@ -11,9 +11,9 @@ import com.rodionov.orient.base.BaseFragment
 import com.rodionov.orient.databinding.ComponentAddItemBinding
 import com.rodionov.orient.modules.start_list.StartListAssembler
 import com.rodionov.orient.modules.start_list.presenter.StartListPresenter
-import com.rodionov.orient.modules.ui.item.AddItem
-import com.rodionov.orient.modules.ui.item.DividerItem
-import com.rodionov.orient.modules.ui.item.StartListItem
+import com.rodionov.orient.ui.item.AddItem
+import com.rodionov.orient.ui.item.DividerItem
+import com.rodionov.orient.ui.item.StartListItem
 import kotlinx.android.synthetic.main.start_list_fragment.*
 
 /**

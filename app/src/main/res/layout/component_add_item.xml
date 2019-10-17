@@ -5,7 +5,7 @@
 
         <variable
                 name="item"
-                type="com.rodionov.orient.modules.ui.item.AddItem" />
+                type="com.rodionov.orient.ui.item.AddItem" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

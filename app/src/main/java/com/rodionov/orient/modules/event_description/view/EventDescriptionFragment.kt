@@ -27,9 +27,9 @@ class EventDescriptionFragment : BaseFragment<EventDescriptionPresenter>(), Even
     }
 
     override fun initViews(view: View) {
-        startProtocolLayout.setOnClickListener {
-            presenter?.startProtocolClicked()
-        }
+//        startProtocolLayout.setOnClickListener {
+//            presenter?.startProtocolClicked()
+//        }
     }
 
     override fun getLayoutResource(): Int {

@@ -1,8 +1,8 @@
 package com.rodionov.orient.modules.start_list.presenter
 
-import com.rodionov.orient.modules.ui.item.AddItem
-import com.rodionov.orient.modules.ui.item.DividerItem
-import com.rodionov.orient.modules.ui.item.StartListItem
+import com.rodionov.orient.ui.item.AddItem
+import com.rodionov.orient.ui.item.DividerItem
+import com.rodionov.orient.ui.item.StartListItem
 
 /**
  * Created by rodionov on 27.09.2019.

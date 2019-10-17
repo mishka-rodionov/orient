@@ -4,7 +4,7 @@
 
         <variable
                 name="item"
-                type="com.rodionov.orient.modules.ui.item.DividerItem" />
+                type="com.rodionov.orient.ui.item.DividerItem" />
     </data>
 
 

@@ -1,4 +1,4 @@
-package com.rodionov.orient.modules.ui.item
+package com.rodionov.orient.ui.item
 
 import com.rodionov.orient.modules.news.model.entity.VKWallPhoto
 

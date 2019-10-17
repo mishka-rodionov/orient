@@ -2,4 +2,15 @@
     <string name="app_name">orient</string>
     <dimen name="statusLineTextSize">18sp</dimen>
     <dimen name="innerPadding">4dp</dimen>
+    <string name="date">Дата</string>
+    <string name="time">Время</string>
+    <string name="location">Место</string>
+    <string name="drivingDirection">Схема проезда</string>
+    <string name="distanceType">Дистанция</string>
+    <string name="checkingSystem">Отметка</string>
+    <string name="distance">Возрастные группы</string>
+    <string name="distanceComment">Комментарий</string>
+    <string name="abortAzimuth">Аварийный азимут</string>
+    <string name="startList">Стартовый протокол</string>
+    <string name="submitApply">Подать заявку</string>
 </resources>

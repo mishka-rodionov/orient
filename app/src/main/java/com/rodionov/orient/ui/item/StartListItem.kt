@@ -1,4 +1,4 @@
-package com.rodionov.orient.modules.ui.item
+package com.rodionov.orient.ui.item
 
 /**
  * Created by rodionov on 23.09.2019.

@@ -1,13 +1,11 @@
 package com.rodionov.orient.modules.start_list.presenter
 
-import android.util.Log
-import com.rodionov.orient.app.OrientApp
 import com.rodionov.orient.base.BasePresenter
 import com.rodionov.orient.modules.start_list.model.interactor.StartListInteractor
 import com.rodionov.orient.modules.start_list.view.StartListView
-import com.rodionov.orient.modules.ui.item.AddItem
-import com.rodionov.orient.modules.ui.item.DividerItem
-import com.rodionov.orient.modules.ui.item.StartListItem
+import com.rodionov.orient.ui.item.AddItem
+import com.rodionov.orient.ui.item.DividerItem
+import com.rodionov.orient.ui.item.StartListItem
 
 /**
  * Created by rodionov on 23.09.2019.

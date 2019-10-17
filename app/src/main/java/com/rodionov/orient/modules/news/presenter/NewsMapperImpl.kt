@@ -2,8 +2,8 @@ package com.rodionov.orient.modules.news.presenter
 
 import com.rodionov.orient.modules.news.model.entity.VKWallPhoto
 import com.rodionov.orient.modules.news.model.entity.VKWallResponse
-import com.rodionov.orient.modules.ui.item.DividerItem
-import com.rodionov.orient.modules.ui.item.VKWallPostItem
+import com.rodionov.orient.ui.item.DividerItem
+import com.rodionov.orient.ui.item.VKWallPostItem
 
 /**
  * Created by rodionov on 03.10.2019.

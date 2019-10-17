@@ -7,8 +7,8 @@ import com.rodionov.orient.modules.event_calendar.model.interactor.EventCalendar
 import com.rodionov.orient.modules.event_calendar.model.interactor.EventCalendarInteractorOutput
 import com.rodionov.orient.modules.event_calendar.router.EventCalendarRouterImpl
 import com.rodionov.orient.modules.event_calendar.view.EventCalendarView
-import com.rodionov.orient.modules.ui.item.DividerItem
-import com.rodionov.orient.modules.ui.item.EventCalendarItem
+import com.rodionov.orient.ui.item.DividerItem
+import com.rodionov.orient.ui.item.EventCalendarItem
 
 
 class EventCalendarPresenterImpl(private val router: EventCalendarRouterImpl) :

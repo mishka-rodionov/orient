@@ -10,8 +10,8 @@ import com.rodionov.orient.base.BaseFragment
 import com.rodionov.orient.databinding.ComponenEventCalendarItemBinding
 import com.rodionov.orient.modules.event_calendar.presenter.EventCalendarPresenter
 import com.rodionov.orient.modules.event_calendar.EventCalendarAssembler
-import com.rodionov.orient.modules.ui.item.DividerItem
-import com.rodionov.orient.modules.ui.item.EventCalendarItem
+import com.rodionov.orient.ui.item.DividerItem
+import com.rodionov.orient.ui.item.EventCalendarItem
 import kotlinx.android.synthetic.main.event_calendar_fragment.*
 
 
