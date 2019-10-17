@@ -1,4 +1,4 @@
-package com.rodionov.orient.user
+package com.rodionov.orient.app.model.user
 
 /**
  * Created by rodionov on 27.09.2019.

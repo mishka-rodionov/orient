@@ -1,6 +1,6 @@
 package com.rodionov.orient.modules.start_list.presenter
 
-import com.rodionov.orient.user.User
+import com.rodionov.orient.app.model.user.User
 
 /**
  * Created by rodionov on 27.09.2019.
